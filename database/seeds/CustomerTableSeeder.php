@@ -12,11 +12,15 @@ class CustomerTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('customers')->insert([
-            'fullName' => 'john Doe',
-            'dateOfBirth' => '1 August 1997',
-            'email' => 'johndoe@test.com',
-            'password' => bcrypt('12345678')
-        ]);
+        $faker = Faker\Factory::create();
+
+        for($i = 0; $i < 100; $i++) {
+            DB::table('customers')->insert([
+                'fullName' => $faker->name,
+                'dateOfBirth' => $faker->date,
+                'email' => $faker->email,
+                'password' => bcrypt('12345678')
+            ]);
+        }
     }
 }
