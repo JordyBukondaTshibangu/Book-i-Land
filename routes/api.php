@@ -24,11 +24,11 @@ Route::delete('/book/{book}', [BookController::class, 'destroy']);
 
 # Customer routes
 
-Route::get('/customer', [CustomerController::class, 'index']);
-Route::get('/customer/{id}', [CustomerController::class, 'show']);
+Route::get('/customers', [CustomerController::class, 'index']);
+Route::get('/customers/{id}', [CustomerController::class, 'show']);
 Route::post('/customer', [CustomerController::class, 'store']);
-Route::put('/customer/{id}', [CustomerController::class, 'update']);
-Route::delete('/customer/{id}', [CustomerController::class, 'destroy']);
+Route::put('/customer/{customer}', [CustomerController::class, 'update']);
+Route::delete('/customer/{customer}', [CustomerController::class, 'destroy']);
 
 
 
