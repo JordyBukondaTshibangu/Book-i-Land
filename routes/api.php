@@ -8,7 +8,7 @@ use App\Http\Controllers\CustomerController;
 
 # Category routes 
 
-Route::get('/category', [CategoryController::class, 'index']);
+Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/category/{id}', [CategoryController::class, 'show']);
 Route::post('/category', [CategoryController::class, 'store']);
 Route::put('/category/{category}', [CategoryController::class, 'update']);
@@ -16,11 +16,11 @@ Route::delete('/category/{category}', [CategoryController::class, 'destroy']);
 
 # Book routes
 
-Route::get('/book', [BookController::class, 'index']);
+Route::get('/books', [BookController::class, 'index']);
 Route::get('/book/{id}', [BookController::class, 'show']);
 Route::post('/book', [BookController::class, 'store']);
-Route::put('/book/{id}', [BookController::class, 'update']);
-Route::delete('/book/{id}', [BookController::class, 'destroy']);
+Route::put('/book/{book}', [BookController::class, 'update']);
+Route::delete('/book/{book}', [BookController::class, 'destroy']);
 
 # Customer routes
 
