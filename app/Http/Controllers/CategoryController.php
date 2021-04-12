@@ -10,7 +10,9 @@ class CategoryController extends Controller
     
     public function index()
     {
-        
+        // $categories = Category::find();
+
+        return "hello world bonjour";
     }
 
     public function store(Request $request)
@@ -20,6 +22,11 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
+        $id = $category->_id;
+
+        $category = Category::findOrFail($id);
+
+        return $category;
         
     }
 
