@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\UserController;
 
 
 # Category routes 
@@ -29,6 +30,15 @@ Route::get('/customers/{id}', [CustomerController::class, 'show']);
 Route::post('/customer', [CustomerController::class, 'store']);
 Route::put('/customer/{customer}', [CustomerController::class, 'update']);
 Route::delete('/customer/{customer}', [CustomerController::class, 'destroy']);
+
+# Administrator routes 
+
+Route::post('/signup', [UserController::class, 'signUp']);
+Route::post('/login', [UserController::class, 'login']);
+Route::get('/profile/{id}', [UserController::class, 'profile']);
+Route::put('/profile/{me}', [UserController::class, 'update']);
+Route::put('/profile/{me}', [UserController::class, 'logout']);
+
 
 
 
