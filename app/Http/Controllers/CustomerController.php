@@ -17,7 +17,7 @@ class CustomerController extends Controller
         ], 200);
     }
     
-    public function store(Request $request)
+    public function register(Request $request)
     {
         $request->validate([
             'fullName' => 'required|unique:customers|max:255',
@@ -50,6 +50,8 @@ class CustomerController extends Controller
     {
         $customer = Customer::findOrFail($id);
 
+        #Hanlde if no customer is found
+
         return response()->json([
             'message' => 'Customer successfully fetched',
             'customer' => $customer
@@ -80,3 +82,6 @@ class CustomerController extends Controller
         ], 200);
     }
 }
+
+
+#Add Customer login and token generated

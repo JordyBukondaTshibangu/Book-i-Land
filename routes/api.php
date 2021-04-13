@@ -27,7 +27,8 @@ Route::delete('/book/{book}', [BookController::class, 'destroy']);
 
 Route::get('/customers', [CustomerController::class, 'index']);
 Route::get('/customers/{id}', [CustomerController::class, 'show']);
-Route::post('/customer', [CustomerController::class, 'store']);
+Route::post('/customer', [CustomerController::class, 'register']);
+Route::post('/customer/login', [CustomerController::class, 'login']);
 Route::put('/customer/{customer}', [CustomerController::class, 'update']);
 Route::delete('/customer/{customer}', [CustomerController::class, 'destroy']);
 

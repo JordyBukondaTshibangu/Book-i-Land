@@ -38,6 +38,8 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
 
+        #Handle if no category is found
+
         return response()->json([
             'Message' => 'Category successfully retrieved',
             'Category' => $category,

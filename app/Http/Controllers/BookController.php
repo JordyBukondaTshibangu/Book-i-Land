@@ -49,6 +49,8 @@ class BookController extends Controller
     {
         $book = Book::find($id);
 
+        #Handle if no book is found
+
         return response()->json([
             'message' => 'Single Book',
             'book' => $book
